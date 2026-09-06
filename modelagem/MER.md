@@ -23,3 +23,7 @@
 * **Explicação:** Uma Disciplina pode dar origem a nenhuma ou várias Turmas, mas cada Turma pertence a apenas 1 Disciplina.
 * **[Professor] (1,1) <leciona> (0,N) [Turma]**
 * **Explicação:** Um Professor pode ministrar nenhuma ou várias Turmas, mas cada Turma tem exatamente 1 Professor responsável.
+* **[Aluno] (1,1) <realiza> (1,N) [Matrícula]**
+* **Explicação:** Um Aluno possui de 1 a N Registros de Matrícula no sistema, e cada registro de Matrícula pertence exclusivamente a 1 Aluno.
+* **[Turma] (1,1) <compoe> (1,N) [Matrícula]**
+* **Explicação:** Uma Turma contém de 1 a N Matrículas de alunos, e cada Matrícula está vinculada a apenas 1 Turma.
