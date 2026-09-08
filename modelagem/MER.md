@@ -40,3 +40,8 @@
 * ## 4. Diagrama Entidade e Relacionamento (DER)
 
 Abaixo apresenta-se a representação visual do modelo conceitual:
+
+<img width="639" height="352" alt="image" src="https://github.com/user-attachments/assets/9ff137eb-e3c7-4953-938d-a4b6d7342b8a" />
+
+
+
