@@ -27,3 +27,12 @@
 * **Explicação:** Um Aluno possui de 1 a N Registros de Matrícula no sistema, e cada registro de Matrícula pertence exclusivamente a 1 Aluno.
 * **[Turma] (1,1) <compoe> (1,N) [Matrícula]**
 * **Explicação:** Uma Turma contém de 1 a N Matrículas de alunos, e cada Matrícula está vinculada a apenas 1 Turma.
+
+* ## 3. Sugestão de Atributos
+
+* **Aluno:** `id_aluno` (PK), `nome`, `cpf`, `data_nascimento`, `email`.
+* **Professor:** `id_professor`(PK), `nome`, `cpf`, `especialidade`, `email`.
+* **Curso:** `id_curso` (PK), `nome_curso`, `carga_horaria_total`.
+* **Disciplina:** `id_disciplina` (PK), `nome_disciplina`, `carga_horaria`, `id_curso`(FK).
+* **Turma:** `id_turma`(PK), `semestre_ano`, `horario`, `id_disciplina`(FK), `id_professor`(FK).
+* **Matrícula:** `id_matricula` (PK), `id_aluno`(FK), `id_turma` (FK), `data_matricula`, `nota_final`, `faltas`.
