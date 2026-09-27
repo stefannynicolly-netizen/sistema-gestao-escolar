@@ -1,7 +1,7 @@
 # Sistema de Gestão Escolar
 
 ## 1. Descrição do Minimundo
-O sistema visa gerenciar os processos acadêmicos de uma instituição de ensino. Ele resolve o problema de desorganização no controle de matrículas, distribuição de disciplinas e lançamentos de notas e frequências, centralizando as informações de alunos, professores e turmas em um único banco de dados.
+Uma instituição de ensino necessita de um sistema informatizado para gerenciar centralizadamente seus processos acadêmicos, visando resolver problemáticas e desorganizações no controle de matrículas, alocação de turmas e acompanhamento do desempenho de seus discentes.
 
 ## 2. Contexto da Aplicação 
 A aplicação atende a comunidade escolar, permitindo a administração do corpo docente e discente, a estruturação da grade curricular e o acompanhamento do desempenho acadêmico.
