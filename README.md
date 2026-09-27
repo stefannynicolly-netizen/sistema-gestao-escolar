@@ -5,6 +5,8 @@ Uma instituição de ensino necessita de um sistema informatizado para gerenciar
 
 A instituição oferece diversos Cursos (como Informática e Administração), onde cada curso possui uma carga horária total e é composto por um conjunto de Disciplinas que compõem sua grade curricular. Cada disciplina tem um nome e carga horária própria, pertencendo obrigatoriamente a apenas um curso.
 
+Para viabilizar as aulas a cada período letivo, são abertas Turmas para as disciplinas. Cada turma é uma oferta prática associada a uma única disciplina e possui definidos o ano/semestre letivo e seu horário de funcionamento. Além disso, cada turma conta com exatamente um Professor responsável alocado para ministrá-la. O sistema mantém os dados dos professores, tais como nome, CPF, e-mail e especialidade.
+
 
 ## 2. Contexto da Aplicação 
 A aplicação atende a comunidade escolar, permitindo a administração do corpo docente e discente, a estruturação da grade curricular e o acompanhamento do desempenho acadêmico.
