@@ -2,6 +2,8 @@
 
 ## 1. Descrição do Minimundo
 Uma instituição de ensino necessita de um sistema informatizado para gerenciar centralizadamente seus processos acadêmicos, visando resolver problemáticas e desorganizações no controle de matrículas, alocação de turmas e acompanhamento do desempenho de seus discentes.
+A instituição oferece diversos Cursos (como Informática e Administração), onde cada curso possui uma carga horária total e é composto por um conjunto de Disciplinas que compõem sua grade curricular.
+
 
 ## 2. Contexto da Aplicação 
 A aplicação atende a comunidade escolar, permitindo a administração do corpo docente e discente, a estruturação da grade curricular e o acompanhamento do desempenho acadêmico.
