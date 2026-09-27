@@ -7,6 +7,8 @@ A instituição oferece diversos Cursos (como Informática e Administração), o
 
 Para viabilizar as aulas a cada período letivo, são abertas Turmas para as disciplinas. Cada turma é uma oferta prática associada a uma única disciplina e possui definidos o ano/semestre letivo e seu horário de funcionamento. Além disso, cada turma conta com exatamente um Professor responsável alocado para ministrá-la. O sistema mantém os dados dos professores, tais como nome, CPF, e-mail e especialidade.
 
+Os Alunos são cadastrados na instituição com informações essenciais como nome, CPF, data de nascimento e e-mail. Para cursar as disciplinas, o aluno efetua sua Matrícula nas turmas ofertadas. Uma matrícula vincula exclusivamente um aluno a uma determinada turma em uma data específica. Através do registro de matrícula, o sistema realiza o acompanhamento acadêmico do aluno, registrando sua nota final e o total de faltas na respectiva turma.
+
 
 ## 2. Contexto da Aplicação 
 A aplicação atende a comunidade escolar, permitindo a administração do corpo docente e discente, a estruturação da grade curricular e o acompanhamento do desempenho acadêmico.
