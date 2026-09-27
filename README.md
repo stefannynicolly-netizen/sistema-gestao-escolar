@@ -20,7 +20,10 @@ A aplicação atende a comunidade escolar, permitindo a administração do corpo
 * **Acompanhamento Escolar:** Registro e consulta de notas e faltas dos alunos.
 
 ## 4. Regras de Negócio
-1. Cadastro de Alunos: Todo aluno deve ter um cadastro ativo no sistema com dados pessoais válidos para realizar matrículas em turmas.
-2. Vínculo da Disciplina ao Curso: Cada disciplina pertence a um único curso específico. Um curso pode ser composto por uma ou várias disciplinas.
-3. Oferta de Turmas: Uma disciplina pode dar origem a nenhuma ou a várias turmas ao longo dos períodos letivos, mas cada turma pertence exclusivamente a uma única disciplina.
-4. O histórico do aluno em cada turma registra sua nota final e total de faltas.
+1. **Cadastro de Alunos:** Todo aluno deve ter um cadastro ativo no sistema com dados pessoais válidos para realizar matrículas em turmas.
+2. **Vínculo da Disciplina ao Curso:** Cada disciplina pertence a um único curso específico. Um curso pode ser composto por uma ou várias disciplinas.
+3. **Oferta de Turmas:** Uma disciplina pode dar origem a nenhuma ou a várias turmas ao longo dos períodos letivos, mas cada turma pertence exclusivamente a uma única disciplina.
+4. **Alocação Docente:** Cada turma é ministrada por exatamente um professor responsável. Um professor pode ministrar nenhuma ou várias turmas no período letivo.
+5. **Vínculo de Matrícula:** Um aluno possui de 1 a N registros de matrícula no sistema, e cada registro de matrícula pertence exclusivamente a um único aluno.
+6. **Composição da Turma:** Uma turma é composta por 1 a N matrículas de alunos. Cada matrícula vincula o aluno a apenas uma turma.
+7. **Histórico Acadêmico:** O registro da matrícula na turma armazena a história acadêmica do aluno, registrando a data da matrícula, sua nota final e o total de faltas acumuladas.
