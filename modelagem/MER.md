@@ -33,9 +33,9 @@
 * **Aluno:** `id_aluno` (PK), `nome`, `cpf`, `data_nascimento`, `email`.
 * **Professor:** `id_professor`(PK), `nome`, `cpf`, `especialidade`, `email`.
 * **Curso:** `id_curso` (PK), `nome_curso`, `carga_horaria_total`.
-* **Disciplina:** `id_disciplina` (PK), `nome_disciplina`, `carga_horaria`, `id_curso`(FK).
-* **Turma:** `id_turma`(PK), `semestre_ano`, `horario`, `id_disciplina`(FK), `id_professor`(FK).
-* **Matrícula:** `id_matricula` (PK), `id_aluno`(FK), `id_turma` (FK), `data_matricula`, `nota_final`, `faltas`.
+* **Disciplina:** `id_disciplina` (PK), `nome_disciplina`, `carga_horaria`.
+* **Turma:** `id_turma`(PK), `semestre_ano`, `horario`.
+* **Matrícula:** `id_matricula` (PK), `data_matricula`, `nota_final`, `faltas`.
 
 * ## 4. Diagrama Entidade e Relacionamento (DER)
 
@@ -43,7 +43,12 @@ Abaixo apresenta-se a representação visual do modelo conceitual:
 
 Ferramenta: brModelo
 
-<img width="639" height="352" alt="image" src="https://github.com/user-attachments/assets/9ff137eb-e3c7-4953-938d-a4b6d7342b8a" />
+[Conceptual model - BRMW.pdf](https://github.com/user-attachments/files/32715705/Conceptual.model.-.BRMW.pdf)
+
+
+
+<img width="789" height="534" alt="Captura de tela 2026-09-27 232501" src="https://github.com/user-attachments/assets/eeb73af2-6cfd-4d10-aac1-613156e62bd9" />
+
 
 
 
