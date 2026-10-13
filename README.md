@@ -28,7 +28,7 @@ A aplicação atende a comunidade escolar, permitindo a administração do corpo
 6. **Composição da Turma:** Uma turma é composta por 1 a N matrículas de alunos. Cada matrícula vincula o aluno a apenas uma turma;
 7. **Histórico Acadêmico:** O registro da matrícula na turma armazena a história acadêmica do aluno, registrando a data da matrícula, sua nota final e o total de faltas acumuladas.
 
-8. # Sistema de Gestão Escolar
+## 5. Sistema de Gestão Escolar no MySQL Workbench
 
 Este projeto consiste na modelagem e implementação de um banco de dados relacional para gerenciamento escolar, desenvolvido no **MySQL Workbench**.
 
