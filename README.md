@@ -27,3 +27,32 @@ A aplicação atende a comunidade escolar, permitindo a administração do corpo
 5. **Vínculo de Matrícula:** Um aluno possui de 1 a N registros de matrícula no sistema, e cada registro de matrícula pertence exclusivamente a um único aluno;
 6. **Composição da Turma:** Uma turma é composta por 1 a N matrículas de alunos. Cada matrícula vincula o aluno a apenas uma turma;
 7. **Histórico Acadêmico:** O registro da matrícula na turma armazena a história acadêmica do aluno, registrando a data da matrícula, sua nota final e o total de faltas acumuladas.
+
+8. # Sistema de Gestão Escolar
+
+Este projeto consiste na modelagem e implementação de um banco de dados relacional para gerenciamento escolar, desenvolvido no **MySQL Workbench**.
+
+## Tecnologias Utilizadas
+
+- **Database:** MySQL 8.0
+- **SGBD GUI:** MySQL Workbench
+
+## Modelo de Banco de Dados (DER)
+
+Abaixo está a representação visual do Diagrama de Entidade e Relacionamento (EER) do sistema:
+
+![Diagrama ER do Banco de Dados](diagrama_banco.png)
+
+
+## Estrutura das Tabelas
+
+O banco de dados é composto por 6 tabelas interligadas:
+
+1. **`curso`**: Armazena as informações dos cursos oferecidos.
+2. **`disciplina`**: Disciplinas associadas a um curso específico.
+3. **`professor`**: Cadastro de professores da instituição.
+4. **`aluno`**: Cadastro de alunos matriculados.
+5. **`turma`**: Vincula disciplinas a professores em um horário/semestre.
+6. **`matricula`**: Relaciona os alunos às suas respectivas turmas, registrando notas e faltas.
+
+
