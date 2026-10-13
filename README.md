@@ -57,4 +57,118 @@ O banco de dados é composto por 6 tabelas interligadas:
 5. **`turma`**: Vincula disciplinas a professores em um horário/semestre.
 6. **`matricula`**: Relaciona os alunos às suas respectivas turmas, registrando notas e faltas.
 
+## 6. Script SQL Completo (DDL e DML)
+
+```sql
+
+
+CREATE DATABASE IF NOT EXISTS sistema_gestao_escolar;
+USE sistema_gestao_escolar;
+
+-- Tabela Curso
+CREATE TABLE IF NOT EXISTS curso (
+    id_curso INT AUTO_INCREMENT PRIMARY KEY,
+    nome_curso VARCHAR(100) NOT NULL,
+    carga_horaria_total INT NOT NULL
+);
+
+-- Tabela Disciplina
+CREATE TABLE IF NOT EXISTS disciplina (
+    id_disciplina INT AUTO_INCREMENT PRIMARY KEY,
+    nome_disciplina VARCHAR(100) NOT NULL,
+    carga_horaria INT NOT NULL,
+    id_curso INT NOT NULL,
+    FOREIGN KEY (id_curso) REFERENCES curso(id_curso)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Tabela Professor
+CREATE TABLE IF NOT EXISTS professor (
+    id_professor INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    especialidade VARCHAR(100),
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Tabela Aluno
+CREATE TABLE IF NOT EXISTS aluno (
+    id_aluno INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(14) NOT NULL UNIQUE,
+    data_nascimento DATE NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Tabela Turma
+CREATE TABLE IF NOT EXISTS turma (
+    id_turma INT AUTO_INCREMENT PRIMARY KEY,
+    semestre_ano VARCHAR(20) NOT NULL,
+    horario VARCHAR(50) NOT NULL,
+    id_disciplina INT NOT NULL,
+    id_professor INT NOT NULL,
+    FOREIGN KEY (id_disciplina) REFERENCES disciplina(id_disciplina)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_professor) REFERENCES professor(id_professor)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Tabela Matrícula
+CREATE TABLE IF NOT EXISTS matricula (
+    id_matricula INT AUTO_INCREMENT PRIMARY KEY,
+    data_matricula DATE NOT NULL,
+    nota_final DECIMAL(4, 2),
+    faltas INT DEFAULT 0,
+    id_aluno INT NOT NULL,
+    id_turma INT NOT NULL,
+    FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+INSERT INTO curso (nome_curso, carga_horaria_total) VALUES
+('TÉCNICO EM INFORMÁTICA', 1200),
+('TÉCNICO EM ADMINISTRAÇÃO', 1000);
+
+INSERT INTO disciplina (nome_disciplina, carga_horaria, id_curso) VALUES
+('BANCO DE DADOS', 80, 1),
+('PROGRAMAÇÃO WEB', 120, 1),
+('GESTÃO EMPRESARIAL', 60, 2);
+
+INSERT INTO professor (nome, cpf, especialidade, email) VALUES
+('CARLOS SILVA', '111.222.333-44', 'BANCO DE DADOS', 'carlos.silva@escola.com'),
+('MARIA FERNANDA', '555.666.777-88', 'ADMINISTRAÇÃO', 'maria.fernanda@escola.com');
+
+INSERT INTO aluno (nome, cpf, data_nascimento, email) VALUES
+('JOÃO PEDRO', '123.456.789-00', '2005-03-15', 'joao.pedro@email.com'),
+('ANA BEATRIZ', '987.654.321-11', '2004-08-22', 'ana.beatriz@email.com');
+
+INSERT INTO turma (semestre_ano, horario, id_disciplina, id_professor) VALUES
+('2026/1', 'SEGUNDA 08:00 - 12:00', 1, 1),
+('2026/1', 'TERÇA 13:30 - 17:30', 3, 2);
+
+INSERT INTO matricula (data_matricula, nota_final, faltas, id_aluno, id_turma) VALUES
+('2026-02-10', 9.5, 2, 1, 1),
+('2026-02-11', 8.0, 0, 2, 2);
+
+##  Consulta de Relatório Geral (DQL)
+
+```sql
+SELECT 
+    a.nome AS Aluno,
+    c.nome_curso AS Curso,
+    d.nome_disciplina AS Disciplina,
+    p.nome AS Professor,
+    m.nota_final AS Nota,
+    m.faltas AS Faltas
+FROM matricula m
+JOIN aluno a ON m.id_aluno = a.id_aluno
+JOIN turma t ON m.id_turma = t.id_turma
+JOIN disciplina d ON t.id_disciplina = d.id_disciplina
+JOIN curso c ON d.id_curso = c.id_curso
+JOIN professor p ON t.id_professor = p.id_professor;
+
+
 
