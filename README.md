@@ -1,3 +1,4 @@
+
 # Sistema de Gestão Escolar
 
 ## 1. Descrição do Minimundo
@@ -30,9 +31,9 @@ A aplicação atende a comunidade escolar, permitindo a administração do corpo
 
 ## 5. Sistema de Gestão Escolar no MySQL Workbench
 
-Este projeto consiste na modelagem e implementação de um banco de dados relacional para gerenciamento escolar, desenvolvido no **MySQL Workbench**.
+Modelagem e implementação de um banco de dados relacional para o gerenciamento escolar, desenvolvido no **MySQL Workbench**.
 
-## Tecnologias Utilizadas
+## Características do MySQL Workbench:
 
 - **Database:** MySQL 8.0
 - **SGBD GUI:** MySQL Workbench
@@ -41,7 +42,8 @@ Este projeto consiste na modelagem e implementação de um banco de dados relaci
 
 Abaixo está a representação visual do Diagrama de Entidade e Relacionamento (EER) do sistema:
 
-![Diagrama ER do Banco de Dados](diagrama_banco.png)
+<img width="826" height="799" alt="diagrama_banco" src="https://github.com/user-attachments/assets/6cb7ae86-d0f0-4172-be08-542384a07d1e" />
+
 
 
 ## Estrutura das Tabelas
