@@ -152,8 +152,11 @@ INSERT INTO turma (semestre_ano, horario, id_disciplina, id_professor) VALUES
 INSERT INTO matricula (data_matricula, nota_final, faltas, id_aluno, id_turma) VALUES
 ('2026-02-10', 9.5, 2, 1, 1),
 ('2026-02-11', 8.0, 0, 2, 2);
+```
 
-##  Consulta de Relatório Geral (DQL)
+---
+
+## 7.  Consulta de Relatório Geral (DQL)
 
 ```sql
 SELECT 
@@ -169,6 +172,4 @@ JOIN turma t ON m.id_turma = t.id_turma
 JOIN disciplina d ON t.id_disciplina = d.id_disciplina
 JOIN curso c ON d.id_curso = c.id_curso
 JOIN professor p ON t.id_professor = p.id_professor;
-
-
-
+```
