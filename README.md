@@ -297,5 +297,3 @@ GROUP BY a.id_aluno, a.nome
 ORDER BY Total_Matriculas DESC;
 
 ### Prints das Execuções
-
-![Resultado da Consulta 1](https://github.com/user-attachments/assets/1c0d709c-342d-4f70-987d-18e21d811ed1)
