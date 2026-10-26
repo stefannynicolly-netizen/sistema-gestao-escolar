@@ -296,6 +296,3 @@ LEFT JOIN matricula m ON a.id_aluno = m.id_aluno
 GROUP BY a.id_aluno, a.nome 
 ORDER BY Total_Matriculas DESC;
 
-### Prints das Execuções
-
-
