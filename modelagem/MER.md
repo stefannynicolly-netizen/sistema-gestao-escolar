@@ -51,6 +51,8 @@
 
 Abaixo apresenta-se a representação visual do modelo conceitual, com as 8 entidades e as cardinalidades:
 
+Ferramenta: Mermaid.js (renderizado pelo GitHub)
+
 ```mermaid
 erDiagram
     CURSO ||--|{ DISCIPLINA : possui
@@ -66,4 +68,3 @@ erDiagram
 
 O diagrama físico (EER), gerado no MySQL Workbench, está no [README](../README.md).
 
-<!-- OPCIONAL: se quiser, arraste aqui a imagem do diagrama feito no brModelo -->
