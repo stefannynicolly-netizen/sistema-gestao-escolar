@@ -21,19 +21,19 @@
 
 ## 2. Relacionamentos e Cardinalidades
 
-* **[Curso] (1,1) <possui> (1,N) [Disciplina]**
+* **[Curso] (1,1) — *possui* — (1,N) [Disciplina]**
   * **Explicação:** Um Curso possui 1 ou várias Disciplinas, mas cada Disciplina pertence a apenas 1 Curso específico.
-* **[Disciplina] (1,1) <gera> (0,N) [Turma]**
+* **[Disciplina] (1,1) — *gera* — (0,N) [Turma]**
   * **Explicação:** Uma Disciplina pode dar origem a nenhuma ou várias Turmas, mas cada Turma pertence a apenas 1 Disciplina.
-* **[Professor] (1,1) <leciona> (0,N) [Turma]**
+* **[Professor] (1,1) — *leciona* — (0,N) [Turma]**
   * **Explicação:** Um Professor pode ministrar nenhuma ou várias Turmas, mas cada Turma tem exatamente 1 Professor responsável.
-* **[Sala] (1,1) <sedia> (0,N) [Turma]**
+* **[Sala] (1,1) — *sedia* — (0,N) [Turma]**
   * **Explicação:** Uma Sala pode sediar nenhuma ou várias Turmas, mas cada Turma acontece em exatamente 1 Sala.
-* **[Aluno] (1,1) <realiza> (1,N) [Matrícula]**
+* **[Aluno] (1,1) — *realiza* — (1,N) [Matrícula]**
   * **Explicação:** Um Aluno possui de 1 a N Registros de Matrícula no sistema, e cada registro de Matrícula pertence exclusivamente a 1 Aluno.
-* **[Turma] (1,1) <compoe> (1,N) [Matrícula]**
+* **[Turma] (1,1) — *compoe* — (1,N) [Matrícula]**
   * **Explicação:** Uma Turma contém de 1 a N Matrículas de alunos, e cada Matrícula está vinculada a apenas 1 Turma.
-* **[Matrícula] (1,1) <recebe> (0,N) [Avaliação]**
+* **[Matrícula] (1,1) — *recebe* — (0,N) [Avaliação]**
   * **Explicação:** Uma Matrícula pode receber nenhuma ou várias Avaliações, e cada Avaliação pertence a exatamente 1 Matrícula.
 
 ## 3. Sugestão de Atributos
@@ -49,8 +49,21 @@
 
 ## 4. Diagrama Entidade e Relacionamento (DER)
 
-Abaixo apresenta-se a representação visual do modelo conceitual:
+Abaixo apresenta-se a representação visual do modelo conceitual, com as 8 entidades e as cardinalidades:
 
-Ferramenta: brModelo
+```mermaid
+erDiagram
+    CURSO ||--|{ DISCIPLINA : possui
+    DISCIPLINA ||--o{ TURMA : gera
+    PROFESSOR ||--o{ TURMA : leciona
+    SALA ||--o{ TURMA : sedia
+    ALUNO ||--|{ MATRICULA : realiza
+    TURMA ||--|{ MATRICULA : compoe
+    MATRICULA ||--o{ AVALIACAO : recebe
+```
 
-<!-- SUBSTITUA ESTA LINHA PELA IMAGEM DO DER ATUALIZADO (com Sala e Avaliação) -->
+> Legenda: `||` = exatamente um (1,1) | `o{` = zero ou muitos (0,N) | `|{` = um ou muitos (1,N).
+
+O diagrama físico (EER), gerado no MySQL Workbench, está no [README](../README.md).
+
+<!-- OPCIONAL: se quiser, arraste aqui a imagem do diagrama feito no brModelo -->
