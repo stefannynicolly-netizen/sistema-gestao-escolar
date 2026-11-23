@@ -53,6 +53,8 @@ Abaixo apresenta-se a representação visual do modelo conceitual, com as 8 enti
 
 Ferramenta: Mermaid.js (renderizado pelo GitHub)
 
+Figura 1
+
 ```mermaid
 erDiagram
     CURSO ||--|{ DISCIPLINA : possui
@@ -67,4 +69,13 @@ erDiagram
 > Legenda: `||` = exatamente um (1,1) | `o{` = zero ou muitos (0,N) | `|{` = um ou muitos (1,N).
 
 O diagrama físico (EER), gerado no MySQL Workbench, está no [README](../README.md).
+
+Ferramenta: DER conceitual, elaborado no brModelo (BRMW)
+
+[Conceptual model - BRMW.pdf](https://github.com/user-attachments/files/35278203/Conceptual.model.-.BRMW.pdf)
+
+Figura 2
+
+<img width="1009" height="670" alt="{9860DE46-CB74-4192-8293-7693B028DAE0}" src="https://github.com/user-attachments/assets/9a131258-a5eb-4168-8263-57c629a73324" />
+
 
