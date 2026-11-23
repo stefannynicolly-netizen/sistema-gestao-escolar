@@ -42,7 +42,9 @@ Modelagem e implementação de um banco de dados relacional para o gerenciamento
 
 Representação visual do Diagrama de Entidade e Relacionamento (EER) do sistema, com as 8 tabelas:
 
-<!-- SUBSTITUA ESTA LINHA PELA IMAGEM DO NOVO DIAGRAMA (arraste a imagem aqui ao editar no GitHub) -->
+
+<img width="904" height="663" alt="diagrama_banco" src="https://github.com/user-attachments/assets/ad8f2416-2c74-4616-8425-b5f0a1b3623a" />
+
 
 ### Estrutura das Tabelas
 
